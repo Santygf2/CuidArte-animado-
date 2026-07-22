@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CuidArte | Bienestar Integral</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR FUTURISTA -->
+  <nav class="navbar-custom" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="logo-container">
+        <div class="logo-icon" style="position:relative;">
+          <i class="bi bi-heart-pulse"></i>
+          <div class="logo-pulse-ring">
+            <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="28"/><circle cx="30" cy="30" r="28"/><circle cx="30" cy="30" r="28"/></svg>
+          </div>
+        </div>
+        <span class="logo-text">CuidArte</span>
+      </a>
+
+      <div class="nav-pill d-none d-lg-flex" id="navPill">
+        <div class="nav-pill-glow" id="navPillGlow"></div>
+        <a href="#inicio" class="nav-link-futuristic active" data-section="inicio"><i class="bi bi-house-door"></i> Inicio</a>
+        <a href="#sobre" class="nav-link-futuristic" data-section="sobre"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
+        <a href="#especialidades" class="nav-link-futuristic" data-section="especialidades"><i class="bi bi-grid"></i> Especialidades</a>
+        <a href="#contacto" class="nav-link-futuristic" data-section="contacto"><i class="bi bi-envelope"></i> Contacto</a>
+        <div class="nav-separator"></div>
+        <a href="#" class="btn-nav-crear-futuristic"><i class="bi bi-person-plus"></i> Crear cuenta</a>
+      </div>
+
+      <button class="btn-hamburger d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" id="hamburgerBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV FUTURISTA -->
+  <div class="offcanvas offcanvas-end offcanvas-futuristic" tabindex="-1" id="mobileNav">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="logo-icon" style="width:38px;height:38px;font-size:1.1rem;box-shadow:0 0 15px rgba(39,190,245,.3);"><i class="bi bi-heart-pulse"></i></div>
+        <span class="logo-text" style="font-size:1.3rem;">CuidArte</span>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column gap-2">
+      <a href="#inicio" class="offcanvas-link" data-bs-dismiss="offcanvas"><i class="bi bi-house-door"></i> Inicio</a>
+      <a href="#sobre" class="offcanvas-link" data-bs-dismiss="offcanvas"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
+      <a href="#especialidades" class="offcanvas-link" data-bs-dismiss="offcanvas"><i class="bi bi-grid"></i> Especialidades</a>
+      <a href="#contacto" class="offcanvas-link" data-bs-dismiss="offcanvas"><i class="bi bi-envelope"></i> Contacto</a>
+      <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(39,190,245,.2),transparent);margin:8px 0;"></div>
+      <a href="#" class="offcanvas-cta"><i class="bi bi-person-plus"></i> Crear cuenta</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-section" id="inicio">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hex-grid-overlay"></div>
+    <div class="orbit-ring orbit-ring-1"></div>
+    <div class="orbit-ring orbit-ring-2"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+    <div class="hero-shape hero-shape-3"></div>
+    <div class="hero-shape hero-shape-4"></div>
+
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="hero-badge intro-anim intro-delay-1">
+            <i class="bi bi-shield-check"></i>
+            Plataforma de bienestar integral
+          </div>
+          <h1 class="hero-title intro-anim intro-delay-2" id="heroTitle">
+            Tu bienestar comienza con <span class="highlight" id="cuidarteWord"></span>
+          </h1>
+          <p class="hero-subtitle intro-anim intro-delay-3">
+            Conectamos a las familias con profesionales especializados en salud, bienestar emocional y cuidado integral. Porque cuidarte es el primer paso para cuidar de los tuyos.
+          </p>
+          <div class="hero-buttons intro-anim intro-delay-4">
+            <a href="#especialidades" class="btn-hero-primary">Ver servicios <i class="bi bi-arrow-right"></i></a>
+            <a href="#sobre" class="btn-hero-outline"><i class="bi bi-play-circle"></i> Conocer más</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-visual intro-anim-scale intro-delay-5">
+            <div class="hero-card-main">
+              <div class="holo-shimmer"></div>
+              <h3><i class="bi bi-emoji-smile me-2"></i>Bienestar Integral</h3>
+              <p>Ofrecemos más de 10 especialidades médicas y de bienestar, todas enfocadas en mejorar la calidad de vida de nuestros pacientes y sus familias.</p>
+              <div class="row g-3 mt-3">
+                <div class="col-4 text-center">
+                  <div style="font-size:2rem;font-weight:800;color:white;">10+</div>
+                  <div style="color:rgba(255,255,255,.7);font-size:.8rem;">Especialidades</div>
+                </div>
+                <div class="col-4 text-center">
+                  <div style="font-size:2rem;font-weight:800;color:white;">24/7</div>
+                  <div style="color:rgba(255,255,255,.7);font-size:.8rem;">Disponibilidad</div>
+                </div>
+                <div class="col-4 text-center">
+                  <div style="font-size:2rem;font-weight:800;color:white;">100%</div>
+                  <div style="color:rgba(255,255,255,.7);font-size:.8rem;">Compromiso</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-stat-float stat-1 intro-anim-fly-r intro-delay-6">
+              <div class="stat-icon blue"><i class="bi bi-people"></i></div>
+              <div class="stat-float-text"><h4>500+</h4><p>Pacientes atendidos</p></div>
+            </div>
+            <div class="hero-stat-float stat-2 intro-anim-fly-l intro-delay-7">
+              <div class="stat-icon pink"><i class="bi bi-award"></i></div>
+              <div class="stat-float-text"><h4>4.9/5</h4><p>Satisfacción</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    </div>
+
+    <div class="wave-divider">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C73.27,62.89,148.27,93.42,221.55,97.62,253.55,99.42,287.86,93.84,321.39,56.44Z" fill="#ffffff"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="intro-section" id="sobre">
+    <div class="futuristic-grid"></div>
+    <div class="blob-deco blob-deco-1"></div>
+    <div class="blob-deco blob-deco-2"></div>
+    <div class="section-deco-hex deco-1"><svg viewBox="0 0 60 52"><path d="M30 0L60 15v22L30 52 0 37V15z" fill="none" stroke="#27BEF5" stroke-width="1.5"/></svg></div>
+    <div class="section-deco-hex deco-2"><svg viewBox="0 0 60 52"><path d="M30 0L60 15v22L30 52 0 37V15z" fill="none" stroke="#FF6B9D" stroke-width="1.5"/></svg></div>
+    <div class="section-deco-hex deco-3"><svg viewBox="0 0 60 52"><path d="M30 0L60 15v22L30 52 0 37V15z" fill="none" stroke="#6DD5FA" stroke-width="1.5"/></svg></div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-left">
+          <div class="section-label"><i class="bi bi-info-circle"></i> Sobre nosotros</div>
+          <h2 class="section-title glitch-title" data-text="Cuidar es un acto de amor">Cuidar es un acto de <span class="text-primary-custom">amor</span></h2>
+          <p class="section-subtitle">En <strong>CuidArte</strong> creemos que el autocuidado es la base para transformar nuestra vida. Somos el puente de confianza entre familias y profesionales del bienestar.</p>
+          <div class="intro-features" id="introFeatures">
+            <div class="intro-feature-item feature-hidden">
+              <div class="intro-feature-icon"><i class="bi bi-shield-check"></i></div>
+              <div class="intro-feature-text"><h5>Profesionales verificados</h5><p>Todos nuestros cuidadores pasan por un riguroso proceso de selección.</p></div>
+            </div>
+            <div class="intro-feature-item feature-hidden">
+              <div class="intro-feature-icon"><i class="bi bi-calendar-check"></i></div>
+              <div class="intro-feature-text"><h5>Flexibilidad total</h5><p>Elige el horario y la frecuencia que mejor se adapte a tu familia.</p></div>
+            </div>
+            <div class="intro-feature-item feature-hidden">
+              <div class="intro-feature-icon"><i class="bi bi-headset"></i></div>
+              <div class="intro-feature-text"><h5>Soporte 24/7</h5><p>Estamos disponibles para ti en cualquier momento que nos necesites.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-right">
+          <div class="intro-image-container">
+            <div class="intro-main-image">
+              <div class="intro-image-glow"></div>
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="CuidArte bienestar">
+            </div>
+            <div class="intro-float-card card-1">
+              <div class="intro-float-icon bg-blue"><i class="bi bi-heart-pulse"></i></div>
+              <div class="intro-float-text"><h5>+500 Pacientes</h5><p>Atendidos con amor</p></div>
+            </div>
+            <div class="intro-float-card card-2">
+              <div class="intro-float-icon bg-pink"><i class="bi bi-star-fill"></i></div>
+              <div class="intro-float-text"><h5>Calificación 4.9</h5><p>Por nuestros pacientes</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wave-divider" style="bottom:-2px;">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#f7f8fc" opacity=".8"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ESPECIALIDADES -->
+  <section class="especialidades-section" id="especialidades">
+    <div class="futuristic-grid"></div>
+    <div class="deco-orb deco-orb-1"></div>
+    <div class="deco-orb deco-orb-2"></div>
+    <div class="deco-orb deco-orb-3"></div>
+    <div class="section-deco-hex deco-4"><svg viewBox="0 0 60 52"><path d="M30 0L60 15v22L30 52 0 37V15z" fill="none" stroke="#27BEF5" stroke-width="1.5"/></svg></div>
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-label d-inline-flex"><i class="bi bi-grid"></i> Especialidades</div>
+        <h2 class="section-title glitch-title" data-text="Nuestras Especialidades">Nuestras <span class="text-primary-custom">Especialidades</span></h2>
+        <p class="section-subtitle mx-auto" style="max-width:600px;">Contamos con profesionales en diversas áreas para brindarte la atención integral que mereces.</p>
+      </div>
+      <div class="row g-4 stagger-children">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="especialidad-card">
+            <div class="card-glow-ring"></div>
+            <div class="scanner-line"></div>
+            <span class="card-number">01</span>
+            <div class="especialidad-icon bg-1"><i class="bi bi-brain"></i></div>
+            <h3>Psicología</h3>
+            <p>Apoyo profesional para la gestión emocional y el bienestar mental de toda la familia.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="especialidad-card">
+            <div class="card-glow-ring"></div>
+            <div class="scanner-line"></div>
+            <span class="card-number">02</span>
+            <div class="especialidad-icon bg-2"><i class="bi bi-egg-fried"></i></div>
+            <h3>Nutrición</h3>
+            <p>Planes personalizados para mejorar tu salud, energía y calidad de vida diaria.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="especialidad-card">
+            <div class="card-glow-ring"></div>
+            <div class="scanner-line"></div>
+            <span class="card-number">03</span>
+            <div class="especialidad-icon bg-3"><i class="bi bi-spa"></i></div>
+            <h3>Terapias Alternativas</h3>
+            <p>Espacios para conectar contigo mismo a través de prácticas holísticas y naturales.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="especialidad-card">
+            <div class="card-glow-ring"></div>
+            <div class="scanner-line"></div>
+            <span class="card-number">04</span>
+            <div class="especialidad-icon bg-4"><i class="bi bi-heart-pulse"></i></div>
+            <h3>Cardiología</h3>
+            <p>Atención especializada para el cuidado y la prevención de enfermedades cardíacas.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="especialidad-card">
+            <div class="card-glow-ring"></div>
+            <div class="scanner-line"></div>
+            <span class="card-number">05</span>
+            <div class="especialidad-icon bg-5"><i class="bi bi-capsule"></i></div>
+            <h3>Oncología</h3>
+            <p>Diagnóstico y tratamiento integral para pacientes oncológicos y sus familias.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="especialidad-card">
+            <div class="card-glow-ring"></div>
+            <div class="scanner-line"></div>
+            <span class="card-number">06</span>
+            <div class="especialidad-icon bg-6"><i class="bi bi-person-heart"></i></div>
+            <h3>Pediatría</h3>
+            <p>Cuidado médico integral para niños y adolescentes con profesionalismo y cariño.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contacto">
+    <div class="futuristic-grid"></div>
+    <div class="container">
+      <div class="cta-box reveal-scale" id="ctaBox">
+        <div class="cta-orbs">
+          <div class="cta-orb cta-orb-1"></div>
+          <div class="cta-orb cta-orb-2"></div>
+          <div class="cta-orb cta-orb-3"></div>
+        </div>
+        <div class="cta-gradient-line"></div>
+        <h2 class="glitch-title" data-text="¿Listo para comenzar?">¿Listo para comenzar?</h2>
+        <p>Contáctanos hoy y descubre cómo podemos ayudarte a mejorar la calidad de vida de ti y tus seres queridos.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn-cta-primary"><i class="bi bi-envelope"></i> Contactar ahora</a>
+          <a href="#" class="btn-cta-outline"><i class="bi bi-person-plus"></i> Crear cuenta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section" id="footerSection">
+    <div class="footer-top-line"></div>
+    <div class="futuristic-grid"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="row g-4" id="footerCols">
+        <div class="col-lg-4 footer-col-reveal">
+          <div class="footer-brand">
+            <h3><i class="bi bi-heart-pulse me-2"></i>CuidArte</h3>
+            <p>Tu espacio para aprender a cuidarte, crecer y compartir bienestar con quienes más amas.</p>
+            <div class="footer-social" id="footerSocial">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 footer-col-reveal">
+          <h4 class="footer-title">Enlaces</h4>
+          <ul class="footer-links" data-footer-links>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Inicio</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Sobre nosotros</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Servicios</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 footer-col-reveal">
+          <h4 class="footer-title">Especialidades</h4>
+          <ul class="footer-links" data-footer-links>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Psicología</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Nutrición</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Cardiología</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Pediatría</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 footer-col-reveal">
+          <h4 class="footer-title">Contacto</h4>
+          <ul class="footer-links" data-footer-links>
+            <li><a href="#"><i class="bi bi-geo-alt"></i> Medellín, Colombia</a></li>
+            <li><a href="#"><i class="bi bi-telephone"></i> +57 300 123 4567</a></li>
+            <li><a href="#"><i class="bi bi-envelope"></i> info@cuidarte.com</a></li>
+            <li><a href="#"><i class="bi bi-clock"></i> Lun - Vie: 8AM - 6PM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> CuidArte. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
